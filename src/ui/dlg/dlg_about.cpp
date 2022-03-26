@@ -52,7 +52,7 @@ enum ThirdPartyLibrary {
 static std::wstring GetLibraryVersion(ThirdPartyLibrary library) {
   switch (library) {
     case kDate:
-      return L"3.0.0";
+      return L"3.0.1";
     case kDiscordRpc:
       return L"3.4.0";
     case kFmt:
@@ -76,7 +76,7 @@ static std::wstring GetLibraryVersion(ThirdPartyLibrary library) {
           (PUGIXML_VERSION % 1000) / 10,
           (PUGIXML_VERSION % 1000) % 10).to_string());
     case kRandom:
-      return L"1.3.0";
+      return L"1.4.0";
     case kRapidJson:
       return StrToWstr(semaver::Version(
           RAPIDJSON_MAJOR_VERSION,
@@ -122,13 +122,15 @@ BOOL AboutDialog::OnInitDialog() {
       L"\\b Author:\\b0\\line "
       L"erengy (Eren Okka)\\line\\par "
       L"\\b Contributors:\\b0\\line "
-      L"saka, Diablofan, slevir, LordGravewish, rr-, sunjayc, ConnorKrammer, Soinou, Jiyuu,\\line "
-      L"ryban, tollyx, pavelxdd, gunt3001, synthtech, cnguy\\line\\par "
+      L"saka, Diablofan, slevir, LordGravewish, rr-, sunjayc, ConnorKrammer, Soinou, Jiyuu, ryban, tollyx,\\line "
+      L"pavelxdd, gunt3001, synthtech, cnguy\\line\\par "
+      L"\\b Donators:\\b0\\line "
+      L"Farfie, Nydaleclya and other anonymous supporters\\line\\par "
       L"\\b Third-party components:\\b0\\line "
       L"{\\field{\\*\\fldinst{HYPERLINK \"https://github.com/HowardHinnant/date\"}}{\\fldrslt{date " + GetLibraryVersion(kDate) + L"}}}, "
       L"{\\field{\\*\\fldinst{HYPERLINK \"https://github.com/discordapp/discord-rpc\"}}{\\fldrslt{Discord RPC " + GetLibraryVersion(kDiscordRpc) + L"}}}, "
       L"{\\field{\\*\\fldinst{HYPERLINK \"https://github.com/fmtlib/fmt\"}}{\\fldrslt{fmt " + GetLibraryVersion(kFmt) + L"}}}, "
-      L"{\\field{\\*\\fldinst{HYPERLINK \"https://github.com/yusukekamiyamane/fugue-icons\"}}{\\fldrslt{Fugue Icons 3.4.5}}}, "
+      L"{\\field{\\*\\fldinst{HYPERLINK \"https://p.yusukekamiyamane.com/icons/search/fugue/\"}}{\\fldrslt{Fugue Icons 3.4.5}}}, "
       L"{\\field{\\*\\fldinst{HYPERLINK \"https://github.com/nlohmann/json\"}}{\\fldrslt{JSON for Modern C++ " + GetLibraryVersion(kJson) + L"}}}, "
       L"{\\field{\\*\\fldinst{HYPERLINK \"https://github.com/curl/curl\"}}{\\fldrslt{libcurl " + GetLibraryVersion(kLibcurl) + L"}}}, "
       L"{\\field{\\*\\fldinst{HYPERLINK \"https://github.com/zeux/pugixml\"}}{\\fldrslt{pugixml " + GetLibraryVersion(kPugixml) + L"}}}, "

@@ -97,6 +97,7 @@ constexpr std::array<MyStatus, 5> kMyStatuses{
   MyStatus::PlanToWatch,
 };
 
+constexpr int kMaxEpisodeCount = 1900;
 constexpr int kUnknownEpisodeCount = -1;
 constexpr int kUnknownEpisodeLength = -1;
 constexpr double kUnknownScore = 0.0;
@@ -139,6 +140,7 @@ struct MyInformation {
   int watched_episodes = 0;
   int score = 0;
   MyStatus status = MyStatus::NotInList;
+  bool is_private = false;
   int rewatched_times = 0;
   bool rewatching = false;
   int rewatching_ep = 0;
